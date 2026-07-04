@@ -1,0 +1,5 @@
+@EndUserText.label: 'Maint. C_LFA1'
+define service /EACM/M_LFA1_SD
+  provider contracts odata_v4_ui {
+  expose /EACM/C_LFA1;
+}

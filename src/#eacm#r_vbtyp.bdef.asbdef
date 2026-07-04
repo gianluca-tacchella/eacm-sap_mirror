@@ -1,0 +1,48 @@
+managed implementation in class /EACM/BP_R_VBTYP unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for /EACM/R_VBTYP alias /eacm/rVbtyp
+persistent table /EACM/VBTYP
+extensible
+draft table /EACM/VBTYP_D
+etag master LocalLastChangedAt
+lock master total etag ChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Vbtyp;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   ChangedBy,
+   ChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Vbtyp;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /EACM/VBTYP corresponding extensible
+  {
+    Vbtyp = VBTYP;
+    Ddtext = DDTEXT;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    ChangedBy = CHANGED_BY;
+    ChangedAt = CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

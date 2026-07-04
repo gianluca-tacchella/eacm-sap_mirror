@@ -1,0 +1,6 @@
+@EndUserText.label: '/EACM/R_VBTYP'
+@MappingRole: true
+define role /EACM/R_VBTYP {
+  grant select on /EACM/R_VBTYP
+  where TRUE;
+}

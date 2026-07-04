@@ -1,0 +1,21 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SD document category",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "/EACM/UI_VBTYP_O4",
+    "serviceName": "/EACM/UI_VBTYP_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "xEACMxC_VBTYP",
+    "name": "VBTYP - SD document category",
+    "transportObject": "",
+    "configurationGroup": "",
+    "skipRootEntity": false
+  },
+  "appConfiguration": {
+    "listReport": {}
+  }
+}

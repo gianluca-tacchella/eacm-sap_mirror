@@ -1,0 +1,74 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: {
+  typeName: 'Stamp-duty Posting',
+  typeNamePlural: 'Stamp-duty Postings'
+}
+annotate entity /EACM/C_LFA1 with
+{
+  @UI.facet: [{ id: 'General', type: #IDENTIFICATION_REFERENCE, label: 'LFA1', position: 10 }]
+
+
+  @UI: { lineItem: [{ position: 10 }], identification: [{ position: 10 }] }
+  Lifnr;
+
+  @UI: { lineItem: [{ position: 20 }], identification: [{ position: 20 }] }
+  Name1;
+    
+  @UI: { lineItem: [{ position: 30 }], identification: [{ position: 30 }] }
+  Land1;
+  
+  @EndUserText.label: 'City'
+  @UI: { lineItem: [{ position: 40 }], identification: [{ position: 40 }] }
+  Ort01;
+  
+  @EndUserText.label: 'District'
+  @UI: { lineItem: [{ position: 50 }], identification: [{ position: 50 }] }
+  Ort02;
+
+  @UI: { lineItem: [{ position: 60 }], identification: [{ position: 60 }] }
+  Pfach;
+
+  @UI: { lineItem: [{ position: 70 }], identification: [{ position: 70 }] }
+  Pstl2;
+
+  @UI: { lineItem: [{ position: 80 }], identification: [{ position: 80 }] }
+  Pstlz;
+
+  @UI: { lineItem: [{ position: 90 }], identification: [{ position: 90 }] }
+  Regio;
+  
+  @EndUserText.label: 'Street and House Number'
+  @UI: { lineItem: [{ position: 100 }], identification: [{ position: 100 }] }
+  Stras;
+
+  @UI: { lineItem: [{ position: 110 }], identification: [{ position: 110 }] }
+  Telf1;
+
+  @UI: { lineItem: [{ position: 120 }], identification: [{ position: 120 }] }
+  Telf2;
+
+  @UI: { lineItem: [{ position: 130 }], identification: [{ position: 130 }] }
+  Stcd1;
+
+  @UI: { lineItem: [{ position: 140 }], identification: [{ position: 140 }] }
+  Stcd2;
+
+  @UI: { lineItem: [{ position: 150 }], identification: [{ position: 150 }] }
+  Stceg;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

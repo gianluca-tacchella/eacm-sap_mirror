@@ -1,0 +1,52 @@
+managed implementation in class /EACM/bp_i_lfa1 unique;
+strict ( 2 );
+with draft;
+
+define behavior for /EACM/I_LFA1 alias LFA1
+persistent table /EACM/LFA1
+draft table /eacm/LFA1_D
+etag master LocalLastChangedAt
+lock master total etag ChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    ChangedBy,
+    ChangedAt,
+    LocalLastChangedAt;
+
+  mapping for /eacm/LFA1
+  {
+      lifnr = lifnr;
+      land1 = land1;
+      name1 = name1;
+      ort01 = ort01;
+      ort02 = ort02;
+      pfach = pfach;
+      pstl2 = pstl2;
+      pstlz = pstlz;
+      regio = regio;
+      stras = stras;
+      telf1 = telf1;
+      telf2 = telf2;
+      stcd1 = stcd1;
+      stcd2 = stcd2;
+      stceg = stceg;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    ChangedBy = changed_by;
+    ChangedAt = changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+}
